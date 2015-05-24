@@ -1,0 +1,1 @@
+vmap <CR> <plug>(easyalign)
