@@ -122,6 +122,8 @@ NeoBundle 'vim-ruby/vim-ruby'
 
 NeoBundle 'tpope/vim-rails'
 
+NeoBundle 'slim-template/vim-slim'
+
 NeoBundle 'tpope/vim-rake'
 
 NeoBundle 'thinca/vim-ref'
