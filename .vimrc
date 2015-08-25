@@ -19,6 +19,27 @@ call neobundle#begin(expand('/Users/yuhoshino/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Plugins---------------------------------------
+" Markdown--------------------------------------
+NeoBundle 'suan/vim-instant-markdown'
+" Coffeescript----------------------------------
+" syntax + 自動compile
+NeoBundle 'kchmck/vim-coffee-script'
+" js BDDツール
+NeoBundle 'claco/jasmine.vim'
+" indentの深さに色を付ける
+NeoBundle 'nathanaelkane/vim-indent-guides'
+" vimにcoffeeファイルタイプを認識させる
+" autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデントを設定
+autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
+
+" Nginx-----------------------------------------
+NeoBundle 'nginx.vim'
+au BufRead,BufNewFile /etc/nginx/* set ft=nginx
+" Swift-----------------------------------------
+NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'keith/swift.vim'
+
 " Snippets--------------------------------------
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -107,6 +128,13 @@ NeoBundle 'Shougo/vimproc.vim', {
        \      'unix': 'make -f make_unix.mak'
        \    }
        \  }
+
+" YAML-----------------------------------------
+NeoBundle 'stephpy/vim-yaml'
+
+" Ansible--------------------------------------
+NeoBundle 'chase/vim-ansible-yaml'
+autocmd BufNew,BufRead playbook.yml setlocal ft=ansible
 
 " Ruby-----------------------------------------
 NeoBundle 'tpope/vim-endwise'

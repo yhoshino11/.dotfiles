@@ -1,5 +1,6 @@
 syntax on
 
+set noerrorbells
 color Dracula
 
 let mapleader = ','
